@@ -1,0 +1,9 @@
+.tituloEcommerce{
+    font-size: 90px;
+    display: flex;
+    justify-content: center;
+    color: #6e48a1;
+    font-family: "Jersey 25", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}

@@ -1,0 +1,85 @@
+/* .izquierdaProductos{
+
+} */
+.izquierdaProductos{
+    display:flex;
+    justify-content: center;
+    align-items: center;;
+}
+.izquierdaProductos li{
+    list-style: none;
+    display: flex;
+    padding: 7px 15px;
+    margin: 3px 20px;
+    background-color: #e7cdfe;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+}
+.izquierdaProductos li:hover{
+    background-color: #6e48a1;
+}
+.izquierdaProductos li a:hover{
+    color: white;
+}
+.izquierdaProductos li a{
+    text-decoration: none;
+    color: black;
+    font-family: "Jersey 25", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+}
+.izquierdaProductos ul{ 
+    display: flex; 
+}
+.navBar-Izquierda{
+    display: flex;
+    width: 50%;
+}
+.navBar{
+    background-color: #ecd7fe;
+    padding: 10px;
+    border-bottom: solid;
+    border-color: #c4a4e5;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+}
+body .logoCommerce{
+    display:flex;
+}
+body .logoCommerce img{
+    height: 70px;
+}
+.navBar-Derecha{
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.navBar-Derecha div{
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    border-style: solid;
+    border-radius: 20px;
+    padding: 5px 12px;
+    border-color: #8464ab;
+    background-color: #332e2e;
+}
+.navBar-Derecha .cantidadProductos{
+position: absolute;
+border-style: solid;
+margin-left: 50px;
+margin-top: 40px;
+padding: 2px 4px;
+background-color: #8464ab;
+border-radius: 40px;
+color: white;
+font-family: "Jersey 25", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+font-size: 20px;
+
+}
