@@ -7,3 +7,52 @@
   font-weight: 700;
   font-style: normal;
 }
+body{
+  background-color: #8560ad;
+}
+.productCard{
+  border-style: solid;
+  border-color: #ecd7fe;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  margin: 50px;
+}
+.productInformation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.productInformation h2{
+  color: #ecd7fe;
+  font-family: "Jersey 25", sans-serif;
+    font-family: "Jersey 25", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.productInformation p{
+  font-size: 30px;
+  color: #ecd7fe;
+    font-family: "Jersey 25", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 10px;
+}
+.productCard .productImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.productCard .productImage img{
+  margin: 10px;
+  height: 100px;
+}
+.mainBody div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
