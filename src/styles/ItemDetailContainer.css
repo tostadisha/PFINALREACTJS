@@ -1,0 +1,112 @@
+.detailGeneral{
+    border-color: #ecd7fe;
+    border-style: solid;
+    width: 80%;
+    margin-top: 80px;
+    margin-left: 10%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.detailGeneral .itemDetailInfo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.detailGeneral .buttonItemDetail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.detailGeneral .buttonItemDetail button{
+    padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  padding: 40px 250px;
+}
+.detailGeneral .buttonItemDetail button:before{
+    content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+@keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  .detailGeneral .buttonItemDetail button:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+.detailGeneral .itemDetailInfo .itemDetailGeneralInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.detailGeneral .itemDetailInfo .itemDetailGeneralInfo .nameProduct{
+    color: #ecd7fe;
+  font-family: "Jersey 25", sans-serif;
+    font-family: "Jersey 25", sans-serif;
+  font-weight: 700;
+  font-size: 45px  ;
+  font-style: normal;
+}
+.detailGeneral .itemDetailInfo .itemDetailGeneralInfo .priceProduct{
+    color: #ecd7fe;
+  font-family: "Jersey 25", sans-serif;
+    font-family: "Jersey 25", sans-serif;
+  font-weight: 700;
+  font-size: 40px  ;
+  font-style: normal;
+}
+.detailGeneral .itemDetailInfo .itemDetailPhoto img{
+    height: 300px;
+    margin: 30px;
+}
