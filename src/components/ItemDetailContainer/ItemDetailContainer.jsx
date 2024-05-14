@@ -7,7 +7,7 @@ const ItemDetailContainer = () => {
   const { idProduct } = useParams();
   console.log(idProduct);
   useEffect(() => {
-    getProducts()
+    getProducts(1)
       .then((respuesta) => {
         const productFind = respuesta.find((e) => e.id == idProduct);
         setProduct(productFind);

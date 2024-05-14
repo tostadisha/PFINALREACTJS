@@ -65,11 +65,11 @@ let productos = [
   },
 ];
 
-const getProducts = () => {
+const getProducts = (time) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(productos);
-    }, 0);
+    }, time);
   });
 };
 

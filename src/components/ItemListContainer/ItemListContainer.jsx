@@ -1,14 +1,16 @@
 import getProducts from "../../data/data";
 import ItemList from "./itemList";
+import ItemLoading from "./ItemLoading";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const { idCategory } = useParams();
-
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
-    getProducts()
+    setLoading(true);
+    getProducts(2000)
       .then((respuesta) => {
         if (idCategory) {
           const productsFilter = respuesta.filter((e) => e.tipo === idCategory);
@@ -22,13 +24,14 @@ const ItemListContainer = () => {
       })
       .finally(() => {
         console.log("Promesa completada");
+        setLoading(false);
       });
   }, [idCategory]);
 
   return (
     <>
       <div className="mainBody">
-        <ItemList products={products} />
+        {loading ? <ItemLoading /> : <ItemList products={products} />}
       </div>
     </>
   );
