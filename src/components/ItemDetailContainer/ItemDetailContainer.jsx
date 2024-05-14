@@ -5,13 +5,11 @@ import { useParams } from "react-router-dom";
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
   const { idProduct } = useParams();
-  console.log(idProduct);
   useEffect(() => {
     getProducts(1)
       .then((respuesta) => {
         const productFind = respuesta.find((e) => e.id == idProduct);
         setProduct(productFind);
-        console.log(productFind);
       })
       .catch((error) => {
         console.log(error);

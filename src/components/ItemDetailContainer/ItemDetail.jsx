@@ -1,5 +1,4 @@
 const ItemDetail = ({ product }) => {
-  console.log(product);
   return (
     <>
       <div className="detailGeneral">
