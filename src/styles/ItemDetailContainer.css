@@ -20,7 +20,7 @@
     align-items: center;
     margin-bottom: 20px;
 }
-.detailGeneral .buttonItemDetail button{
+.detailGeneral .buttonItemDetail .mainButton{
     padding: 0.6em 2em;
   border: none;
   outline: none;
@@ -34,8 +34,13 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   padding: 40px 250px;
+  text-decoration: none;
+    font-family: "Jersey 25", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 40px;
 }
-.detailGeneral .buttonItemDetail button:before{
+.detailGeneral .buttonItemDetail .mainButton:before{
     content: "";
   background: linear-gradient(
     45deg,
@@ -62,6 +67,32 @@
   transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
 }
+.detailGeneral .buttonItemDetail .mainButton:active{
+  animation: slowScaleAnimation 0.02s ease-in-out forwards;
+}
+@keyframes slowScaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+.detailGeneral .buttonItemDetail #onHoverButtonDetail:before{
+  content: "";
+background: linear-gradient(
+  45deg,
+  #48ff00,
+  #48ff00,
+  #48ff00,
+  #48ff00,
+  #48ff00,
+  #48ff00,
+  #48ff00,
+  #48ff00,
+  #48ff00
+);
+}
 @keyframes glowing-button-85 {
     0% {
       background-position: 0 0;
@@ -73,7 +104,7 @@
       background-position: 0 0;
     }
   }
-  .detailGeneral .buttonItemDetail button:after {
+  .detailGeneral .buttonItemDetail .mainButton:after {
     z-index: -1;
     content: "";
     position: absolute;

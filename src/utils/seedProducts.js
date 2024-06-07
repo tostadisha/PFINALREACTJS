@@ -1,3 +1,5 @@
+import db from "../db/db.js";
+import { addDoc, collection } from "firebase/firestore";
 let productos = [
   {
     id: 1,
@@ -64,11 +66,35 @@ let productos = [
     fuente: "/src/assets/products/ID8.png",
   },
 ];
-
-const getProducts = () => {
-  return new Promise((resolve, reject) => {
-    resolve(productos);
+let productos2 = [
+  {
+    id: 9,
+    nombre: "Logitech M305 Pebble",
+    precio: 42999,
+    stock: 7,
+    tipo: "mouse",
+    fuente: "/src/assets/products/ID9.png",
+  },
+  {
+    id: 10,
+    nombre: "Logitech K380s Pebble",
+    precio: 66059,
+    stock: 2,
+    tipo: "teclado",
+    fuente: "/src/assets/products/ID10.png",
+  },
+  {
+    id: 11,
+    nombre: "Red Dragon Zeus",
+    precio: 114299,
+    stock: 1,
+    tipo: "auricular",
+    fuente: "/src/assets/products/ID11.png",
+  },
+];
+const seedProducts = () => {
+  productos2.map(({ id, ...rest }) => {
+    addDoc(collection(db, "productos"), rest);
   });
 };
-
-export default getProducts;
+seedProducts();

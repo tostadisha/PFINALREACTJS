@@ -19,6 +19,10 @@ body{
   border-radius: 30px;
   margin: 50px;
   padding-top: 20px;
+  text-decoration: none;
+}
+#changeOnHoverCard{
+  background-color: #6e48a1;
 }
 .productInformation{
   display: flex;
@@ -47,6 +51,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 .productCard .productImage img{
   margin: 10px;

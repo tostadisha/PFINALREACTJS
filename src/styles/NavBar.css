@@ -1,6 +1,4 @@
-/* .izquierdaProductos{
 
-} */
 .izquierdaProductos{
     display:flex;
     justify-content: center;
@@ -69,12 +67,11 @@ body .logoCommerce img{
     border-color: #8464ab;
     background-color: #332e2e;
 }
-.navBar-Derecha .cantidadProductos{
+.navBar-Derecha a .cantidadProductos{
 position: absolute;
 border-style: solid;
-margin-left: 45px;
-margin-top: 37px;
 padding: 2px 4px;
+margin-left: 50px;
 background-color: #8464ab;
 border-radius: 40px;
 color: white;
@@ -82,5 +79,6 @@ font-family: "Jersey 25", sans-serif;
   font-weight: 700;
   font-style: normal;
 font-size: 20px;
+top:60px
 
 }

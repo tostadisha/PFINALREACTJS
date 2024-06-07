@@ -1,0 +1,163 @@
+.checkoutBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkoutBox form{
+    border-style: solid;
+    display: flex;
+    border-color: #110023;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+    margin-top: 50px;
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.checkoutBox form h2{
+    margin: 0;
+}
+.checkoutBox form h2,h3,label{
+    text-decoration: none;
+    color: black;
+    font-family: "Jersey 25", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 30px;
+}
+.checkoutBox form input{
+    border-radius: 20px;
+    margin: 10px;
+}
+.signbutton {
+    margin-top: 30px;
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .signbutton-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition:
+      transform
+      600ms
+      cubic-bezier(.3, .7, .4, 1);
+  }
+  
+  .signbutton-edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+      to left,
+      hsl(146deg, 50%, 36%) 0%,
+      hsl(158deg, 73%, 35%) 8%,
+      hsl(158deg, 73%, 35%) 92%,
+      hsl(146deg, 50%, 36%) 100%
+    );
+  }
+  
+  .signbutton-front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(147deg, 50%, 47%) ;
+    will-change: transform;
+    transform: translateY(-4px);
+    transition:
+      transform
+      600ms
+      cubic-bezier(.3, .7, .4, 1);
+  }
+  
+  @media (min-width: 768px) {
+    .signbutton-front {
+      font-size: 1.25rem;
+      padding: 12px 20px;
+    }
+  }
+  
+  .signbutton:hover {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+  }
+  
+  .signbutton:hover .signbutton-front {
+    transform: translateY(-6px);
+    transition:
+      transform
+      250ms
+      cubic-bezier(.3, .7, .4, 1.5);
+  }
+  
+  .signbutton:active .signbutton-front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }
+  
+  .signbutton:hover .signbutton-shadow {
+    transform: translateY(4px);
+    transition:
+      transform
+      250ms
+      cubic-bezier(.3, .7, .4, 1.5);
+  }
+  
+  .signbutton:active .signbutton-shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+  }
+  
+  .signbutton:focus:not(:focus-visible) {
+    outline: none;
+  }
+.finalOrder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.finalOrder div{
+    border-style: solid;
+    border-radius: 30px;
+    padding: 30px;
+    border-color: #110023;
+    margin: 40px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.finalOrder div h2,p{
+    text-decoration: none;
+    color: black;
+    font-family: "Jersey 25", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 30px;
+}
+.finalOrder div .orderNumber{
+    color: white;
+    font-size: 35px;
+}
