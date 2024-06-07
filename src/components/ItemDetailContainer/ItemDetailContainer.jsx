@@ -25,6 +25,9 @@ const ItemDetailContainer = () => {
     }
   };
   useEffect(() => {
+    console.log(loading);
+  }, [loading]);
+  useEffect(() => {
     setLoading(true);
     getProductsAndFind();
   }, [idProduct]);
