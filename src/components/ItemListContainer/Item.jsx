@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { currencyFormatter } from "../../utils/index";
 
 const Item = ({ product }) => {
   const [hovered, setHovered] = useState(false);
@@ -25,7 +26,7 @@ const Item = ({ product }) => {
         </div>
         <div className="productInformation">
           <div className="nameProduct">{product.nombre}</div>
-          <p>{product.precio} ARS</p>
+          <p>{currencyFormatter(product.precio)} ARS</p>
         </div>
       </Link>
     </>

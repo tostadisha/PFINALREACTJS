@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import Form from "./Form";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import db from "../../db/db.js";
-import { Timestamp, addDoc, collection, doc, setDoc } from "firebase/firestore";
+import { Timestamp, addDoc, collection } from "firebase/firestore";
 import validateForm from "../../data/validationYup.js";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 const Checkout = () => {
   const { cart, calculateTotalPrice, deleteCart } = useContext(CartContext);
   const [idOrder, setIdOrder] = useState(null);
@@ -32,7 +33,7 @@ const Checkout = () => {
       if (response.status === "success") {
         generateOrder(order);
       } else if (response.message === "formData is not defined") {
-        toast.warning("Porfavor, ponga su información antes de mandarla");
+        toast.warning("Por favor, ponga su información antes de mandarla");
       } else {
         toast.warning(response.message);
       }
@@ -57,6 +58,13 @@ const Checkout = () => {
             <h2>Orden generada de forma correcta</h2>
             <p>Su número de pedido es: </p>
             <p className="orderNumber">{idOrder}</p>
+            <Link to="/">
+              <button className="signbutton" role="button">
+                <span className="signbutton-shadow"></span>
+                <span className="signbutton-edge"></span>
+                <span className="signbutton-front text">Listo</span>
+              </button>
+            </Link>
           </div>
         </div>
       ) : (

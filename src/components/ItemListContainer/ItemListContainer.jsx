@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import db from "../../db/db.js";
+import { Link } from "react-router-dom";
+import { FaHome } from "react-icons/fa";
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const { idCategory } = useParams();
@@ -32,7 +34,16 @@ const ItemListContainer = () => {
   return (
     <>
       <div className="mainBody">
-        {loading ? <ItemLoading /> : <ItemList products={products} />}
+        {loading && <ItemLoading />}
+        {!loading && products.length === 0 && (
+          <div className="errorContainer">
+            <h2>Ups! No deberías estar aquí</h2>
+            <Link to="/">
+              <FaHome color="111" size={30} />
+            </Link>
+          </div>
+        )}
+        {!loading && products.length > 0 && <ItemList products={products} />}
       </div>
     </>
   );

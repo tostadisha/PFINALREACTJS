@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { CiCircleMinus } from "react-icons/ci";
 import { CiCirclePlus } from "react-icons/ci";
+import { currencyFormatter } from "../../utils/index";
 const TopCart = () => {
   const { cart, setCart } = useContext(CartContext);
   const calPrice = (quantity, price) => {
@@ -33,9 +34,6 @@ const TopCart = () => {
       setCart([...cart]);
     }
   };
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
 
   return (
     <div className="topCart">
@@ -48,7 +46,9 @@ const TopCart = () => {
             <div className="cartItemName">{product.nombre}</div>
             <div className="cartItemAmount">Cantidad: {product.cantidad}</div>
             <div className="cartItemTotalPrice">
-              Precio total: {calPrice(product.cantidad, product.precio)} ARS
+              Precio total:{" "}
+              {currencyFormatter(calPrice(product.cantidad, product.precio))}
+              ARS
             </div>
             <div>
               <button

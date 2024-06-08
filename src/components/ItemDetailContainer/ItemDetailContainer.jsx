@@ -4,7 +4,9 @@ import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import ItemLoading from "./ItemLoading";
 import { collection, getDocs } from "firebase/firestore";
+import { FaHome } from "react-icons/fa";
 import db from "../../db/db.js";
+import { Link } from "react-router-dom";
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
   const { idProduct } = useParams();
@@ -24,9 +26,7 @@ const ItemDetailContainer = () => {
       console.error("Hubo un error en la pedida de info", error);
     }
   };
-  useEffect(() => {
-    console.log(loading);
-  }, [loading]);
+
   useEffect(() => {
     setLoading(true);
     getProductsAndFind();
@@ -34,7 +34,16 @@ const ItemDetailContainer = () => {
 
   return (
     <div className="mainBody">
-      {loading ? <ItemLoading /> : <ItemDetail product={product} />}
+      {loading && <ItemLoading />}
+      {!loading && !product && (
+        <div className="errorContainer">
+          <h2>Ups! No deberías estar aquí</h2>
+          <Link to="/">
+            <FaHome color="111" size={30} />
+          </Link>
+        </div>
+      )}
+      {!loading && product && <ItemDetail product={product} />}
     </div>
   );
 };

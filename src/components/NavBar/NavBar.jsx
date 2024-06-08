@@ -19,7 +19,7 @@ const NavBar = () => {
               <Link to="/tipo/mouse">Mouses</Link>
             </li>
             <li>
-              <Link to="/tipo/teclado">Teclados</Link>{" "}
+              <Link to="/tipo/teclado">Teclados</Link>
             </li>
           </ul>
         </div>

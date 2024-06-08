@@ -14,7 +14,7 @@ const Form = ({ formData, handleChangeInput, handleSubmitForm }) => {
           onChange={handleChangeInput}
         />
 
-        <label>Telefono: </label>
+        <label>Teléfono: </label>
         <input
           type="text"
           name="telefono"

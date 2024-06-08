@@ -1,16 +1,16 @@
-.tituloEcommerce{
-    font-size: 90px;
-    display: flex;
-    justify-content: center;
-    color: #6e48a1;
-    font-family: "Jersey 25", sans-serif;
+.tituloEcommerce {
+  font-size: 90px;
+  display: flex;
+  justify-content: center;
+  color: #6e48a1;
+  font-family: "Jersey 25", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
-body{
+body {
   background-color: #8560ad;
 }
-.productCard{
+.productCard {
   border-style: solid;
   border-color: #ecd7fe;
   width: 25%;
@@ -21,47 +21,62 @@ body{
   padding-top: 20px;
   text-decoration: none;
 }
-#changeOnHoverCard{
+#changeOnHoverCard {
   background-color: #6e48a1;
 }
-.productInformation{
+.productInformation {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.productInformation .nameProduct{
+.productInformation .nameProduct {
   color: #ecd7fe;
   font-family: "Jersey 25", sans-serif;
-    font-family: "Jersey 25", sans-serif;
+  font-family: "Jersey 25", sans-serif;
   font-weight: 700;
-  font-size: 24px  ;
+  font-size: 24px;
   font-style: normal;
 }
-.productInformation p{
+.productInformation p {
   font-size: 30px;
   color: #ecd7fe;
-    font-family: "Jersey 25", sans-serif;
+  font-family: "Jersey 25", sans-serif;
   font-weight: 700;
   font-style: normal;
   margin-top: 10px;
 }
-.productCard .productImage{
+.productCard .productImage {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
 }
-.productCard .productImage img{
+.productCard .productImage img {
   margin: 10px;
   height: 100px;
 }
-.mainBody div{
+.mainBody div {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.mainBody .loadingList{
-margin-top: 200px;}
+.mainBody .loadingList {
+  margin-top: 200px;
+}
+.mainBody .errorContainer {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+}
+.mainBody .errorContainer h2 {
+  color: #111;
+  font-size: 38px;
+}
+.mainBody .errorContainer svg {
+  height: 105px;
+  width: 105px;
+  border-color: white;
+}

@@ -3,6 +3,7 @@ import { MdDelete } from "react-icons/md";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
+import { currencyFormatter } from "../../utils/index.jsx";
 const BottomCart = () => {
   const { cart, deleteCart } = useContext(CartContext);
   const calculateTotalPrice = () => {
@@ -15,7 +16,7 @@ const BottomCart = () => {
     <div className="bottomCart">
       <Link to="/checkout">
         <button className="buyCart" role="button">
-          COMPRAR - {calculateTotalPrice()} ARS
+          COMPRAR - {currencyFormatter(calculateTotalPrice())} ARS
         </button>
       </Link>
 

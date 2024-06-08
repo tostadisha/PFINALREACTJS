@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import { toast } from "react-toastify";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { currencyFormatter } from "../../utils/index";
 const ItemDetail = ({ product }) => {
   const { addProductCart, cart } = useContext(CartContext);
   const [productAdded, setProductAdded] = useState(false);
@@ -29,9 +30,6 @@ const ItemDetail = ({ product }) => {
       addProductCart(product);
     }
   };
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
 
   return (
     <>
@@ -42,7 +40,9 @@ const ItemDetail = ({ product }) => {
           </div>
           <div className="itemDetailGeneralInfo">
             <div className="nameProduct">{product.nombre}</div>
-            <div className="priceProduct">{product.precio} ARS</div>
+            <div className="priceProduct">
+              {currencyFormatter(product.precio)} ARS
+            </div>
             <div className="generalInfoProduct"></div>
           </div>
         </div>
